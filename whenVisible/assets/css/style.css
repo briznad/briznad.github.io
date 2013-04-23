@@ -24,14 +24,10 @@
 /* line 45, style.scss */
 html {
   background-color: #3a3a3a;
-}
-
-/* line 49, style.scss */
-html.delayed {
   background-image: url(assets/images/low_contrast_linen.png);
 }
 
-/* line 53, style.scss */
+/* line 50, style.scss */
 body {
   margin: 0;
   padding: 0;
@@ -42,13 +38,13 @@ body {
   color: whitesmoke;
 }
 
-/* line 63, style.scss */
+/* line 60, style.scss */
 a {
   font-weight: bold;
   text-decoration: none;
   color: #ebebeb;
 }
-/* line 68, style.scss */
+/* line 65, style.scss */
 a:hover {
   text-decoration: underline;
 }
