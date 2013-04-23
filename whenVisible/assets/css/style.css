@@ -1,0 +1,67 @@
+/* ==========================================================================
+   my custom styles
+   ========================================================================== */
+/* helper styles */
+/* line 26, style.scss */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* line 37, style.scss */
+.relative-container {
+  position: relative;
+}
+
+/* /helper styles */
+/* general page styles */
+/* line 45, style.scss */
+html {
+  background-color: #3a3a3a;
+}
+
+/* line 49, style.scss */
+html.delayed {
+  background-image: url(assets/images/low_contrast_linen.png);
+}
+
+/* line 53, style.scss */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+/* line 63, style.scss */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ebebeb;
+}
+/* line 68, style.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* state-specific styles */
+/* /state-specific styles */
+/* dev */
+/* /dev */
+/* /general page styles */
+/* responsive media queries */
+@media (min-width: 1025px) {
+  /* if larger than typical tablet display, aka desktop styles */
+}
+@media (max-width: 480px) {
+  /* if smaller or equal to typical phone display, aka phone styles */
+}
