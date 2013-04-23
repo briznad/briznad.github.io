@@ -2,7 +2,7 @@
    my custom styles
    ========================================================================== */
 /* helper styles */
-/* line 26, style.scss */
+/* line 33, style.scss */
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -14,39 +14,159 @@
   overflow: hidden;
 }
 
-/* line 37, style.scss */
+/* line 44, style.scss */
 .relative-container {
   position: relative;
 }
 
+/* line 48, style.scss */
+.left {
+  float: left;
+}
+
+/* line 52, style.scss */
+.right {
+  float: right;
+}
+
 /* /helper styles */
 /* general page styles */
-/* line 45, style.scss */
+/* line 60, style.scss */
 html {
   background-color: #3a3a3a;
   background-image: url(../images/low_contrast_linen.png);
 }
 
-/* line 50, style.scss */
+/* line 65, style.scss */
 body {
-  margin: 0;
+  margin: 0 20px 40px 20px;
   padding: 0;
-  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   color: whitesmoke;
 }
 
-/* line 60, style.scss */
+/* line 74, style.scss */
 a {
   font-weight: bold;
   text-decoration: none;
   color: #ebebeb;
 }
-/* line 65, style.scss */
+/* line 79, style.scss */
 a:hover {
   text-decoration: underline;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 85, style.scss */
+h1 {
+  font-size: 3.3em;
+  text-shadow: 1px 1px 0 #bdc3c7, 2px 2px 0 #bdc3c7, 3px 3px 0 #bdc3c7;
+}
+
+/* line 90, style.scss */
+h2 {
+  margin-bottom: 0.3em;
+}
+
+/* line 94, style.scss */
+.attribution {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px 10px;
+}
+
+/* line 101, style.scss */
+nav {
+  text-align: center;
+  margin: 0;
+  max-width: 870px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 112, style.scss */
+.button {
+  display: inline-block;
+  min-width: 180px;
+  padding: 1em;
+  text-align: center;
+  border-radius: 6px;
+}
+/* line 119, style.scss */
+.button:hover {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+/* line 126, style.scss */
+.button:nth-child(1) {
+  background-color: #1abc9c;
+  box-shadow: 5px 5px 0 #16a085;
+}
+/* line 132, style.scss */
+.button:nth-child(1):hover {
+  background-color: #1cc9a7;
+}
+/* line 135, style.scss */
+.button:nth-child(1):active {
+  background-color: #18af91;
+}
+/* line 139, style.scss */
+.button:nth-child(2) {
+  background-color: #3498db;
+  box-shadow: 5px 5px 0 #2980b9;
+}
+/* line 145, style.scss */
+.button:nth-child(2):hover {
+  background-color: #419fdd;
+}
+/* line 148, style.scss */
+.button:nth-child(2):active {
+  background-color: #2791d9;
+}
+/* line 152, style.scss */
+.button:nth-child(3) {
+  background-color: #9b59b6;
+  box-shadow: 5px 5px 0 #8e44ad;
+}
+/* line 158, style.scss */
+.button:nth-child(3):hover {
+  background-color: #a164bb;
+}
+/* line 161, style.scss */
+.button:nth-child(3):active {
+  background-color: #954eb1;
+}
+
+/* line 167, style.scss */
+.container {
+  display: inline-block;
+  min-width: 420px;
+  min-height: 420px;
+  margin: 2.7em 0;
+  padding: 40px;
+  border-radius: 8px;
+  background-color: #f1c40f;
+  box-shadow: 10px 10px 0 #f39c12;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 183, style.scss */
+img {
+  position: relative;
 }
 
 /* state-specific styles */
