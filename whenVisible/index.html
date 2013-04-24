@@ -47,7 +47,9 @@
         <script src="assets/js/do.js"></script>
 
         <script>
-        	$('#code').load('assets/js/do.js');
+        	$('#code').load('assets/js/do.js', function() {
+        		hljs.highlightBlock(this);
+        	});
         </script>
 
         <script>
