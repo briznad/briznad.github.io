@@ -84,7 +84,8 @@ a {
 
 h1 {
 	font-size: 3.3em;
-	text-shadow: 1px 1px 0 #BDC3C7, 2px 2px 0 #BDC3C7, 3px 3px 0 #BDC3C7;
+	$shadowColor: #e74c3c;
+	text-shadow: 1px 1px 0 $shadowColor, 2px 2px 0 $shadowColor, 3px 3px 0 $shadowColor;
 }
 
 h2 {
@@ -182,6 +183,7 @@ nav {
 
 img {
 	position: relative;
+	box-shadow: -7px -7px 0 rgba(0, 0, 255, 0.6);
 }
 
 /* state-specific styles */

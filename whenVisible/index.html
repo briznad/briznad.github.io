@@ -22,12 +22,14 @@
     	</nav>
 
     	<section class="container">
-    		<div id="imgWrapper" class="img-wrapper"></div>
+    		<img id="exampleImg" alt="">
     	</section>
 
-    	<h2>Cool! / What the hell was that?!</h2>
+    	<h2>Cool! <small>and/or</small> What the hell was that?!</h2>
 		<hr>
     	<p></p>
+
+    	<pre><code id="code" class="javascript code"></code></pre>
 
 
     	<!--[if lt IE 9]>
@@ -37,9 +39,13 @@
 	    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
         <script>window.Zepto || document.write('<script src="assets/js/plugins/zepto.min.js"><\/script>')</script>
 
-        <script src="assets/plugins/jquery.whenvisible.js"></script>
+        <script src="assets/js/plugins/jquery.whenvisible.js"></script>
 
         <script src="assets/js/do.js"></script>
+
+        <script>
+        	$('#code').load('assets/js/do.js');
+        </script>
 
         <script>
             var _gaq=[['_setAccount','UA-40372275-1'],['_trackPageview']];

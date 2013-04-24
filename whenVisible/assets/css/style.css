@@ -62,15 +62,15 @@ a:hover {
 /* line 85, style.scss */
 h1 {
   font-size: 3.3em;
-  text-shadow: 1px 1px 0 #bdc3c7, 2px 2px 0 #bdc3c7, 3px 3px 0 #bdc3c7;
+  text-shadow: 1px 1px 0 #e74c3c, 2px 2px 0 #e74c3c, 3px 3px 0 #e74c3c;
 }
 
-/* line 90, style.scss */
+/* line 91, style.scss */
 h2 {
   margin-bottom: 0.3em;
 }
 
-/* line 94, style.scss */
+/* line 95, style.scss */
 .attribution {
   position: absolute;
   top: 0;
@@ -78,7 +78,7 @@ h2 {
   margin: 8px 10px;
 }
 
-/* line 101, style.scss */
+/* line 102, style.scss */
 nav {
   text-align: center;
   margin: 0;
@@ -92,7 +92,7 @@ nav {
   transform: translateX(-50%);
 }
 
-/* line 112, style.scss */
+/* line 113, style.scss */
 .button {
   display: inline-block;
   min-width: 180px;
@@ -100,52 +100,52 @@ nav {
   text-align: center;
   border-radius: 6px;
 }
-/* line 119, style.scss */
+/* line 120, style.scss */
 .button:hover {
   text-decoration: none;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 126, style.scss */
+/* line 127, style.scss */
 .button:nth-child(1) {
   background-color: #1abc9c;
   box-shadow: 5px 5px 0 #16a085;
 }
-/* line 132, style.scss */
+/* line 133, style.scss */
 .button:nth-child(1):hover {
   background-color: #1cc9a7;
 }
-/* line 135, style.scss */
+/* line 136, style.scss */
 .button:nth-child(1):active {
   background-color: #18af91;
 }
-/* line 139, style.scss */
+/* line 140, style.scss */
 .button:nth-child(2) {
   background-color: #3498db;
   box-shadow: 5px 5px 0 #2980b9;
 }
-/* line 145, style.scss */
+/* line 146, style.scss */
 .button:nth-child(2):hover {
   background-color: #419fdd;
 }
-/* line 148, style.scss */
+/* line 149, style.scss */
 .button:nth-child(2):active {
   background-color: #2791d9;
 }
-/* line 152, style.scss */
+/* line 153, style.scss */
 .button:nth-child(3) {
   background-color: #9b59b6;
   box-shadow: 5px 5px 0 #8e44ad;
 }
-/* line 158, style.scss */
+/* line 159, style.scss */
 .button:nth-child(3):hover {
   background-color: #a164bb;
 }
-/* line 161, style.scss */
+/* line 162, style.scss */
 .button:nth-child(3):active {
   background-color: #954eb1;
 }
 
-/* line 167, style.scss */
+/* line 168, style.scss */
 .container {
   display: inline-block;
   min-width: 420px;
@@ -164,9 +164,10 @@ nav {
   transform: translateX(-50%);
 }
 
-/* line 183, style.scss */
+/* line 184, style.scss */
 img {
   position: relative;
+  box-shadow: -7px -7px 0 rgba(0, 0, 255, 0.6);
 }
 
 /* state-specific styles */

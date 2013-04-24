@@ -4,16 +4,25 @@ var method = {
 		return Math.floor(Math.random() * 301) + 100;
 	},
 	loadPlugin: function() {
-		$('imgWrapper').whenVisible(function(el) {
-			var $container = $(el).parents('.container');
+		$('#exampleImg').whenVisible(function(el) {
+			// center image within it's container
+
+			var $container = $(el).parent('.container');
+			// calculate inner container dimensions
+			var containerInnerWidth = $container.width() - (parseInt($container.css('padding-left')) + parseInt($container.css('padding-right')));
+			var containerInnerHeight = $container.height() - (parseInt($container.css('padding-top')) + parseInt($container.css('padding-bottom')));
+			// move img
 			$(el).css({
-				top: parseInt((($container.height() - (parseInt($container.css('padding')) * 2)) - $(el).height()) / 2)
+				left: parseInt((containerInnerWidth - $(el).width()) / 2),
+				top: parseInt((containerInnerHeight - $(el).height()) / 2)
 			});
-		}, 100, 3000);
+		}, 50, 6000);
 	},
 	loadKitten: function() {
-		var tempSize = method.randoNum();
-		$('#imgWrapper').load('http://placekitten.com/' + tempSize + '/' + tempSize);
+		$('#exampleImg').attr({
+			src: 'http://placekitten.com/' + method.randoNum() + '/' + method.randoNum(),
+			alt: 'ahhh, kitten'
+    	}).show();
 	}
 };
 
@@ -24,6 +33,7 @@ $('#loadPlugin').on('click', function(e) {
 });
 $('#loadBoth').on('click', function(e) {
 	e.preventDefault();
+	$('#exampleImg').hide();
 	method.loadPlugin();
 	method.loadKitten();
 });
