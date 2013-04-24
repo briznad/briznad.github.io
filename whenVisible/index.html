@@ -16,23 +16,23 @@
 
     	<aside class="attribution">by <a href="http://twitter.com/briznad">@briznad</a></aside>
 
-    	<section class="demo">
+    	<section class="demo clearfix">
 
-	    	<nav>
-	    		<a id="runPlugin" class="button left" href="#">Run Plugin</a>
-	    		<a id="doBoth" class="button" href="#">Do Both</a>
-	    		<a id="loadKitten" class="button right" href="#">Load Kitten</a>
-	    	</nav>
-
-	    	<div class="container">
+	    	<div class="container left">
 	    		<img id="exampleImg" alt="">
 	    	</div>
+
+	    	<nav class="left">
+	    		<a class="button" id="loadKitten" href="#">Load Kitten</a>
+	    		<a class="button" id="runPlugin" href="#">Run Plugin</a>
+	    		<a class="button" id="doBoth" href="#">Do Both</a>
+	    	</nav>
 
     	</section>
 
     	<section class="explanation">
 
-	    	<h2>Cool! <small>and/or</small> What the hell was that?!</h2>
+	    	<h2>Cool! <small>and/or</small> What the hell is this?!</h2>
 			<hr>
 	    	<p>This an example of the <a href="http://plugins.jquery.com/whenvisible">whenVisible jQuery/Zepto plugin</a>. You can read more about how the plugin works and how to use it on its <a href="https://github.com/briznad/whenvisible/">Github page</a>. The function of this demo is to load a randomly sized kitten and then reposition the kitten to be centered horizontally and vertically within its parent element, the yellow box. You can load the kitten first and then load the positioning function or load the positiong function first and then load the kitten. Or, for a more realistic example, run them both at the same time. The novelty of the plugin is that it provides a flexible and accurate way to tell when an element is visible on the screen, which can be tricky when dealing with images. A common solution is to use <a href="http://api.jquery.com/load-event/">jQuery's <span class="tech">.load</span> event method</a> either on the window object or the desired image. However, as the jQuery page explains, there are numerous bugs and gotchas when attempting to monitor image loading. Also, you have to make sure your event handler is registered prior to the image being loaded. The whenVisible plugin takes a much more basic approach to detecting if an element is loaded: it checks to see if the element has a width and height greater than 0. That's it. If the image element meets these conditions, a callback is fired. If not, the plugin will monitor the situation, repeatedly checking at a set interval for any changes. As soon as the image loads, BOOM, callback fired. Otherwise it waits. Eventually, if the element never gains a width and height, it will simply give up. Admittedly, this fills a narrow use case where such a plugin would be necessary. But I needed it, so I built it, and hopefully it can help you at some point. Enjoy!</p>
 

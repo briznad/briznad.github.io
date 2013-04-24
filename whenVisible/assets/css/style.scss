@@ -53,6 +53,14 @@ $yellowDk: #f39c12;
 	float: right;
 }
 
+.clearfix:after {
+	content: " ";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
 /* /helper styles */
 
 /* general page styles */
@@ -99,23 +107,26 @@ h2 {
 	margin: 8px 10px;
 }
 
+.demo {
+	margin-bottom: 2.7em;
+}
+
 nav {
-	text-align: center;
-	margin: 0;
-	max-width: 870px;
-
 	position: relative;
-	left: 50%;
-
-	@include prefix(transform, translateX(-50%));
+	left: -24px;
 }
 
 .button {
-	display: inline-block;
+	display: block;
 	min-width: 180px;
 	padding: 1em;
 	text-align: center;
 	border-radius: 6px;
+	margin-top: 1em;
+
+	&:first-child {
+		margin-top: 2em;
+	}
 
 	&:hover {
 		text-decoration: none;
@@ -166,19 +177,12 @@ nav {
 }
 
 .container {
-	display: inline-block;
 	min-width: 420px;
 	min-height: 420px;
-	margin: 2.7em 0;
 	padding: 40px;
 	border-radius: 8px;
 	background-color: $yellowLt;
 	box-shadow: 10px 10px 0 $yellowDk;
-
-	position: relative;
-	left: 50%;
-
-	@include prefix(transform, translateX(-50%));
 }
 
 img {
@@ -230,7 +234,15 @@ img {
 
 }
 
-@media (max-width: 480px) { /* if smaller or equal to typical phone display, aka phone styles */
+@media (max-width: 751px) {
+
+	nav {
+		position: static;
+	}
+
+}
+
+@media (max-width: 600px) {
 
 	.explanation {
 		p {
