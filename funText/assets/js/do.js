@@ -1,0 +1,1 @@
+$('h1').funText(40, 'reverseCandy');
