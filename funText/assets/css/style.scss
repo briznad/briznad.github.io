@@ -1,0 +1,123 @@
+/* ==========================================================================
+   my custom styles
+   ========================================================================== */
+
+// mixins
+
+@mixin prefix($rule, $val) {
+	@each $browser in -webkit-, -moz-, -ms-, -o-, "" {
+		#{$browser}#{$rule}: $val;
+	}
+}
+
+// /mixins
+
+// color variables
+
+$greenLt: #1abc9c;
+$greenDk: #16a085;
+
+$blueLt: #3498db;
+$blueDk: #2980b9;
+
+$purpleLt: #9b59b6;
+$purpleDk: #8e44ad;
+
+$yellowLt: #f1c40f;
+$yellowDk: #f39c12;
+
+// /color variables
+
+/* helper styles */
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.relative-container {
+    position: relative;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
+/* /helper styles */
+
+/* general page styles */
+
+html {
+	background-color: #3a3a3a;
+	background-image: url(../images/low_contrast_linen.png);
+}
+
+body {
+	margin: 0;
+	padding: 1em;
+	-webkit-font-smoothing: antialiased;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: rgb(245, 245, 245);
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(235, 235, 235);
+
+	&:hover {
+		text-decoration: underline;
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+	}
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	margin-top: 35%;
+
+	@include prefix(transform, translate3d(0, 0, 0));
+
+	$shadowColor: #e74c3c;
+	text-shadow: 1px 1px 0 $shadowColor, 2px 2px 0 $shadowColor, 3px 3px 0 $shadowColor;
+}
+
+.attribution {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 8px 10px;
+}
+
+/* state-specific styles */
+
+
+
+/* /state-specific styles */
+
+/* dev */
+
+
+
+/* /dev */
+
+/* /general page styles */

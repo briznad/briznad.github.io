@@ -1,0 +1,96 @@
+/* ==========================================================================
+   my custom styles
+   ========================================================================== */
+/* helper styles */
+/* line 33, style.scss */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* line 44, style.scss */
+.relative-container {
+  position: relative;
+}
+
+/* line 48, style.scss */
+.left {
+  float: left;
+}
+
+/* line 52, style.scss */
+.right {
+  float: right;
+}
+
+/* line 56, style.scss */
+.clearfix:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+/* /helper styles */
+/* general page styles */
+/* line 68, style.scss */
+html {
+  background-color: #3a3a3a;
+  background-image: url(../images/low_contrast_linen.png);
+}
+
+/* line 73, style.scss */
+body {
+  margin: 0;
+  padding: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+/* line 82, style.scss */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ebebeb;
+}
+/* line 87, style.scss */
+a:hover {
+  text-decoration: underline;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 93, style.scss */
+h1 {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 35%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  text-shadow: 1px 1px 0 #e74c3c, 2px 2px 0 #e74c3c, 3px 3px 0 #e74c3c;
+}
+
+/* line 104, style.scss */
+.attribution {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px 10px;
+}
+
+/* state-specific styles */
+/* /state-specific styles */
+/* dev */
+/* /dev */
+/* /general page styles */
