@@ -47,8 +47,8 @@
         <script src="assets/js/do.js"></script>
 
         <script>
-	        hljs.tabReplace = '    '; // 4 spaces
         	$('#code').load('assets/js/do.js', function() {
+        		hljs.tabReplace = '    '; // 4 spaces
         		hljs.highlightBlock($(this)[0]);
         	});
         </script>
