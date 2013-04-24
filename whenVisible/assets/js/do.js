@@ -3,7 +3,7 @@ var method = {
 	randoNum: function() { // give me a random number between 100 and 300
 		return Math.floor(Math.random() * 301) + 100;
 	},
-	loadPlugin: function() {
+	runPlugin: function() {
 		$('#exampleImg').whenVisible(function(el) {
 			// center image within it's container
 
@@ -22,19 +22,19 @@ var method = {
 		$('#exampleImg').attr({
 			src: 'http://placekitten.com/' + method.randoNum() + '/' + method.randoNum(),
 			alt: 'ahhh, kitten'
-    	}).show();
+		}).show();
 	}
 };
 
 // register button events
-$('#loadPlugin').on('click', function(e) {
+$('#runPlugin').on('click', function(e) {
 	e.preventDefault();
-	method.loadPlugin();
+	method.runPlugin();
 });
-$('#loadBoth').on('click', function(e) {
+$('#doBoth').on('click', function(e) {
 	e.preventDefault();
 	$('#exampleImg').hide();
-	method.loadPlugin();
+	method.runPlugin();
 	method.loadKitten();
 });
 $('#loadKitten').on('click', function(e) {

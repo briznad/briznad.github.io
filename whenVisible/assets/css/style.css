@@ -170,7 +170,23 @@ img {
   box-shadow: -7px -7px 0 rgba(0, 0, 255, 0.6);
 }
 
-/* line 189, style.scss */
+/* line 190, style.scss */
+.explanation p {
+  line-height: 1.4em;
+  text-align: justify;
+  -webkit-columns: auto 2;
+  -moz-columns: auto 2;
+  -ms-columns: auto 2;
+  -o-columns: auto 2;
+  columns: auto 2;
+}
+/* line 196, style.scss */
+.explanation .tech {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* line 202, style.scss */
 .code {
   overflow: auto;
   border-radius: 6px;
@@ -187,4 +203,12 @@ img {
 }
 @media (max-width: 480px) {
   /* if smaller or equal to typical phone display, aka phone styles */
+  /* line 232, style.scss */
+  .explanation p {
+    -webkit-columns: auto 1;
+    -moz-columns: auto 1;
+    -ms-columns: auto 1;
+    -o-columns: auto 1;
+    columns: auto 1;
+  }
 }

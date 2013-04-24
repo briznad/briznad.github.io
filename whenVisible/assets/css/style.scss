@@ -186,6 +186,19 @@ img {
 	box-shadow: -7px -7px 0 rgba(0, 0, 255, 0.6);
 }
 
+.explanation {
+	p {
+		line-height: 1.4em;
+		text-align: justify;
+
+		@include prefix(columns, auto 2);
+	}
+	.tech {
+		font-family: monospace;
+		font-weight: bold;
+	}
+}
+
 .code {
 	overflow: auto;
 	border-radius: 6px;
@@ -215,6 +228,10 @@ img {
 
 @media (max-width: 480px) { /* if smaller or equal to typical phone display, aka phone styles */
 
-
+	.explanation {
+		p {
+			@include prefix(columns, auto 1);
+		}
+	}
 
 }
