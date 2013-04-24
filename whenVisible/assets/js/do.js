@@ -1,6 +1,6 @@
 // define methods
 var method = {
-	randoNum: function() { // give me a random number between 100 and 300
+	randoNum: function() { // give me a random number between 100 and 400
 		return Math.floor(Math.random() * 301) + 100;
 	},
 	runPlugin: function() {
