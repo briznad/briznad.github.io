@@ -174,11 +174,11 @@ img {
 .explanation p {
   line-height: 1.4em;
   text-align: justify;
-  -webkit-columns: auto 2;
-  -moz-columns: auto 2;
-  -ms-columns: auto 2;
-  -o-columns: auto 2;
-  columns: auto 2;
+  -webkit-columns: auto 3;
+  -moz-columns: auto 3;
+  -ms-columns: auto 3;
+  -o-columns: auto 3;
+  columns: auto 3;
 }
 /* line 196, style.scss */
 .explanation .tech {
@@ -198,12 +198,20 @@ img {
 /* /dev */
 /* /general page styles */
 /* responsive media queries */
-@media (min-width: 1025px) {
+@media (max-width: 1024px) {
   /* if larger than typical tablet display, aka desktop styles */
+  /* line 226, style.scss */
+  .explanation p {
+    -webkit-columns: auto 2;
+    -moz-columns: auto 2;
+    -ms-columns: auto 2;
+    -o-columns: auto 2;
+    columns: auto 2;
+  }
 }
 @media (max-width: 480px) {
   /* if smaller or equal to typical phone display, aka phone styles */
-  /* line 232, style.scss */
+  /* line 236, style.scss */
   .explanation p {
     -webkit-columns: auto 1;
     -moz-columns: auto 1;
