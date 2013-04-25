@@ -91,24 +91,42 @@ a {
 }
 
 h1 {
+	display: inline-block;
 	font-size: 3.3em;
 	$shadowColor: #e74c3c;
 	text-shadow: 1px 1px 0 $shadowColor, 2px 2px 0 $shadowColor, 3px 3px 0 $shadowColor;
+}
+
+.attribution {
+	margin-left: 1em;
+}
+
+.github-ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 h2 {
 	margin-bottom: 0.3em;
 }
 
-.attribution {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 8px 10px;
-}
-
 .demo {
 	margin-bottom: 2.7em;
+}
+
+.container {
+	min-width: 420px;
+	min-height: 420px;
+	padding: 40px;
+	border-radius: 8px;
+	background-color: $yellowLt;
+	box-shadow: 10px 10px 0 $yellowDk;
+
+	img {
+		position: relative;
+		box-shadow: -7px -7px 0 rgba(0, 0, 255, 0.6);
+	}
 }
 
 nav {
@@ -174,20 +192,6 @@ nav {
 			background-color: darken($buttonColor, $lightenBy);
 		}
 	}
-}
-
-.container {
-	min-width: 420px;
-	min-height: 420px;
-	padding: 40px;
-	border-radius: 8px;
-	background-color: $yellowLt;
-	box-shadow: 10px 10px 0 $yellowDk;
-}
-
-img {
-	position: relative;
-	box-shadow: -7px -7px 0 rgba(0, 0, 255, 0.6);
 }
 
 .explanation {
