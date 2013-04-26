@@ -2,7 +2,7 @@
    my custom styles
    ========================================================================== */
 /* helper styles */
-/* line 33, style.scss */
+/* line 41, style.scss */
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -14,22 +14,22 @@
   overflow: hidden;
 }
 
-/* line 44, style.scss */
+/* line 52, style.scss */
 .relative-container {
   position: relative;
 }
 
-/* line 48, style.scss */
+/* line 56, style.scss */
 .left {
   float: left;
 }
 
-/* line 52, style.scss */
+/* line 60, style.scss */
 .right {
   float: right;
 }
 
-/* line 56, style.scss */
+/* line 64, style.scss */
 .clearfix:after {
   content: " ";
   display: block;
@@ -40,39 +40,45 @@
 
 /* /helper styles */
 /* general page styles */
-/* line 68, style.scss */
+/* line 76, style.scss */
 html {
   background-color: #3a3a3a;
   background-image: url(../images/low_contrast_linen.png);
 }
 
-/* line 73, style.scss */
+/* line 81, style.scss */
 body {
+  max-width: 1020px;
   margin: 0;
-  padding: 1em;
+  padding: 30px;
   -webkit-font-smoothing: antialiased;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   color: whitesmoke;
 }
 
-/* line 82, style.scss */
+/* line 91, style.scss */
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #ebebeb;
+  color: darkgrey;
 }
-/* line 87, style.scss */
+/* line 96, style.scss */
 a:hover {
   text-decoration: underline;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
 }
 
-/* line 93, style.scss */
-h1 {
-  font-size: 4em;
+/* line 102, style.scss */
+hgroup {
   text-align: center;
-  margin-top: 35%;
+  margin: 10% 0;
+}
+/* line 106, style.scss */
+hgroup h1 {
+  display: inline-block;
+  margin: 0;
+  font-size: 4em;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -80,13 +86,195 @@ h1 {
   transform: translate3d(0, 0, 0);
   text-shadow: 1px 1px 0 #e74c3c, 2px 2px 0 #e74c3c, 3px 3px 0 #e74c3c;
 }
+/* line 117, style.scss */
+hgroup .attribution {
+  display: inline-block;
+  position: relative;
+  margin-left: 1em;
+}
 
-/* line 104, style.scss */
-.attribution {
+/* line 124, style.scss */
+.github-ribbon {
   position: absolute;
   top: 0;
-  right: 0;
-  margin: 8px 10px;
+  left: 0;
+}
+
+/* line 130, style.scss */
+.tech-text {
+  font-family: monospace;
+}
+
+/* line 134, style.scss */
+.reference {
+  background-color: #9b59b6;
+  border-radius: 6px;
+}
+/* line 138, style.scss */
+.reference header {
+  padding: 0.7em 1em;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #8e44ad;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+/* line 146, style.scss */
+.reference h2 {
+  margin: 0;
+}
+/* line 150, style.scss */
+.reference .description {
+  font-weight: normal;
+  font-style: italic;
+}
+/* line 155, style.scss */
+.reference dl {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 5px;
+  padding: 0.5em;
+}
+/* line 160, style.scss */
+.reference dt {
+  font-weight: bold;
+  margin: 0.5em 0 0.3em 0;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba(200, 200, 200, 0.4);
+}
+/* line 166, style.scss */
+.reference dt:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+/* line 172, style.scss */
+.reference dt .default {
+  font-weight: normal;
+}
+/* line 176, style.scss */
+.reference dd {
+  margin: 0;
+}
+/* line 179, style.scss */
+.reference dd .type {
+  margin-bottom: 0.3em;
+}
+/* line 184, style.scss */
+.reference p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 189, style.scss */
+.inner-content {
+  padding: 0 1em 1em;
+}
+
+/* line 193, style.scss */
+.demo-container {
+  background-color: #8e44ad;
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+/* line 200, style.scss */
+.code-container {
+  margin: 0;
+}
+
+/* line 204, style.scss */
+.demo-code {
+  display: inline-block;
+  padding: 0.7em 1em;
+  border-radius: 5px;
+  font-size: 1.4em;
+  opacity: 0.8;
+  margin-bottom: 0.7em;
+  border: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+/* line 214, style.scss */
+.inputs-container {
+  padding: 0.5em;
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  border-radius: 5px;
+  background-color: rgba(100, 100, 100, 0.4);
+  margin: 0 0.7em 0.7em 0;
+  display: block;
+  float: left;
+}
+/* line 223, style.scss */
+.inputs-container label {
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.2em;
+}
+/* line 229, style.scss */
+.inputs-container label:first-child {
+  margin-top: 0;
+}
+/* line 233, style.scss */
+.inputs-container label > span {
+  min-width: 105px;
+  display: inline-block;
+  text-align: right;
+}
+/* line 240, style.scss */
+.inputs-container input {
+  margin-left: 0.7em;
+  padding: 0.5em;
+  color: whitesmoke;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 1em;
+}
+/* line 249, style.scss */
+.inputs-container .option-size {
+  width: 50px;
+  background-color: #3498db;
+  border-color: #2980b9;
+}
+/* line 255, style.scss */
+.inputs-container .option-color {
+  width: 125px;
+  background-color: #1abc9c;
+  border-color: #16a085;
+}
+
+/* line 262, style.scss */
+.options-container {
+  float: left;
+}
+
+/* line 266, style.scss */
+.options-group {
+  margin-top: 0.3em;
+}
+/* line 269, style.scss */
+.options-group:first-child {
+  margin-top: 0;
+}
+
+/* line 274, style.scss */
+.example-option {
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  display: inline-block;
+  padding: 0.5em 0.7em;
+  border-radius: 4px;
+  color: whitesmoke;
+  text-align: center;
+}
+/* line 282, style.scss */
+.example-option:hover {
+  text-decoration: none;
+}
+/* line 286, style.scss */
+.example-option.number {
+  background-color: #3498db;
+}
+/* line 290, style.scss */
+.example-option.color {
+  background-color: #1abc9c;
 }
 
 /* state-specific styles */

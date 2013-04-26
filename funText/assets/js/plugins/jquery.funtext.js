@@ -34,8 +34,8 @@
         }
 
         // reverse things
-        pantone.reverseRainbow = pantone.rainbow.reverse();
-        pantone.reverseCandy = pantone.candy.reverse();
+        pantone.reverseRainbow = pantone.rainbow.slice(0).reverse();
+        pantone.reverseCandy = pantone.candy.slice(0).reverse();
 
         var switches = {
         	solidColor: true
@@ -92,14 +92,21 @@
 			},
 
 	        init: function() {
-	        	if (typeof(shadowSize) === 'undefined' || shadowSize === null) shadowSize = 10;
+	        	if (typeof(shadowSize) === 'undefined' || shadowSize === null) {
+	        		shadowSize = 10;
+	        	} else if (typeof(shadowSize) !== 'number' && (typeof(shadowColor) === 'undefined' || shadowColor === null)) {
+	        		shadowColor = shadowSize;
+	        		shadowSize = 10;
+	        	}
+
 	        	if (typeof(shadowColor) === 'undefined' || shadowColor === null) {
 	        		shadowColor = '#e74c3c';
 	        	} else if (typeof(pantone[shadowColor]) !== 'undefined') {
 					switches.solidColor = false;
 	        		shadowColor = pantone[shadowColor];
 	        	} else if (typeof(shadowColor) === 'object' || Object.prototype.toString.call(shadowColor) === '[object Array]') {
-	        		switches.solidColor = false;
+					if (shadowColor.length === 1) shadowColor = shadowColor[0];
+					else switches.solidColor = false;
 	        	}
 
 	            base.shadowSize = shadowSize;

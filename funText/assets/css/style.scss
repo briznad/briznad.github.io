@@ -26,6 +26,14 @@ $purpleDk: #8e44ad;
 $yellowLt: #f1c40f;
 $yellowDk: #f39c12;
 
+$orangeLt: #e67e22;
+$orangeDk: #d35400;
+
+$link: #a9a9a9;
+$text: #f5f5f5;
+
+$borderLt: rgba(200, 200, 200, 0.4);
+
 // /color variables
 
 /* helper styles */
@@ -71,41 +79,217 @@ html {
 }
 
 body {
+	max-width: 1020px;
 	margin: 0;
-	padding: 1em;
+	padding: 30px;
 	-webkit-font-smoothing: antialiased;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
-	color: rgb(245, 245, 245);
+	color: $text;
 }
 
 a {
 	font-weight: bold;
 	text-decoration: none;
-	color: rgb(235, 235, 235);
+	color: $link;
 
 	&:hover {
 		text-decoration: underline;
-		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+		text-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
 	}
 }
 
-h1 {
-	font-size: 4em;
+hgroup {
 	text-align: center;
-	margin-top: 35%;
+	margin: 10% 0;
 
-	@include prefix(transform, translate3d(0, 0, 0));
+	h1 {
+		display: inline-block;
+		margin: 0;
+		font-size: 4em;
 
-	$shadowColor: #e74c3c;
-	text-shadow: 1px 1px 0 $shadowColor, 2px 2px 0 $shadowColor, 3px 3px 0 $shadowColor;
+		@include prefix(transform, translate3d(0, 0, 0));
+
+		$shadowColor: #e74c3c;
+		text-shadow: 1px 1px 0 $shadowColor, 2px 2px 0 $shadowColor, 3px 3px 0 $shadowColor;
+	}
+
+	.attribution {
+		display: inline-block;
+		position: relative;
+		margin-left: 1em;
+	}
 }
 
-.attribution {
+.github-ribbon {
 	position: absolute;
 	top: 0;
-	right: 0;
-	margin: 8px 10px;
+	left: 0;
+}
+
+.tech-text {
+	font-family: monospace;
+}
+
+.reference {
+	background-color: $purpleLt;
+	border-radius: 6px;
+
+	header {
+		padding: 0.7em 1em;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		background-color: $purpleDk;
+		border-bottom: 1px solid $borderLt;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	.description {
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	dl {
+		background-color: rgba(100, 100, 100, 0.4);
+		border-radius: 5px;
+		padding: 0.5em;
+	}
+	dt {
+		font-weight: bold;
+		margin: 0.5em 0 0.3em 0;
+		padding-top: 0.5em;
+		border-top: 1px solid $borderLt;
+
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+			border-top: none;
+		}
+
+		.default {
+			font-weight: normal;
+		}
+	}
+	dd {
+		margin: 0;
+
+		.type {
+			margin-bottom: 0.3em;
+		}
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.inner-content {
+	padding: 0 1em 1em;
+}
+
+.demo-container {
+	background-color: $purpleDk;
+	border: 1px solid $borderLt;
+	border-radius: 5px;
+	padding: 1em;
+}
+
+.code-container {
+	margin: 0;
+}
+
+.demo-code {
+	display: inline-block;
+	padding: 0.7em 1em;
+	border-radius: 5px;
+	font-size: 1.4em;
+	opacity: 0.8;
+	margin-bottom: 0.7em;
+	border: 1px solid $borderLt;
+}
+
+.inputs-container {
+	padding: 0.5em;
+	border: 1px solid $borderLt;
+	border-radius: 5px;
+	background-color: rgba(100, 100, 100, 0.4);
+	margin: 0 0.7em 0.7em 0;
+	display: block;
+	float: left;
+
+	label {
+		display: block;
+		cursor: pointer;
+		font-weight: bold;
+		margin-top: 0.2em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		& > span {
+			min-width: 105px;
+			display: inline-block;
+			text-align: right;
+		}
+	}
+
+	input {
+		margin-left: 0.7em;
+		padding: 0.5em;
+		color: $text;
+		border-style: solid;
+		border-radius: 4px;
+		font-size: 1em;
+	}
+
+	.option-size {
+		width: 50px;
+		background-color: $blueLt;
+		border-color: $blueDk;
+	}
+
+	.option-color {
+		width: 125px;
+		background-color: $greenLt;
+		border-color: $greenDk;
+	}
+}
+
+.options-container {
+	float: left;
+}
+
+.options-group {
+	margin-top: 0.3em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.example-option {
+	border: 1px solid $borderLt;
+	display: inline-block;
+	padding: 0.5em 0.7em;
+	border-radius: 4px;
+	color: $text;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&.number {
+		background-color: $blueLt;
+	}
+
+	&.color {
+		background-color: $greenLt;
+	}
 }
 
 /* state-specific styles */
